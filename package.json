@@ -14,8 +14,9 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "build": "cd client && yarn run start",
     "install-client": "cd client && yarn install",
-    "heroku-postbuild": "yarn run install-client && yarn run build",
-    "start": "node server/app.js"
+
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && yarn install && yarn run build"
   },
   "author": "",
   "license": "ISC",
