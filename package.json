@@ -14,7 +14,7 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "build": "cd client && yarn start",
     "install-client": "cd client && yarn install",
-    "heroku-postbuild": "yarn install-client && yarn build",
+    "heroku-postbuild": "YARN_CONFIG_PRODUCTION=false yarn install --prefix client && yarn run build --prefix client",
     "start": "node server/app.js"
   },
   "author": "",
