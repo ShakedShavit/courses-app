@@ -11,9 +11,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && yarn start",
     "server": "env-cmd -f ./config/dev.env nodemon server/app.js",
-    "server-prod": "node server/app.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "yarn server-prod"
+    "build": "cd client && yarn run start",
+    "install-client": "cd client && yarn install",
+    "heroku-postbuild": "yarn run install-client && yarn run build",
+    "start": "node server/app.js"
   },
   "author": "",
   "license": "ISC",
