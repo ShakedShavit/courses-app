@@ -22,6 +22,7 @@ const path = require("path")
 
 
 if (process.env.NODE_ENV === 'production') {
+    console.log('aaaaa', process.env.NODE_ENV, process.env.PORT)
     app.use(express.static(path.join(__dirname, "client", "build")));
     app.use('*', express.static(path.join(__dirname, "client", "build")))
 }
