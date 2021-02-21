@@ -6,6 +6,7 @@ const studentRouter = require('./routes/student');
 const courseRouter = require('./routes/course');
 
 const port = process.env.PORT || 5000;
+console.log(port);
 
 const app = express();
 

@@ -9,7 +9,6 @@
     "server": "env-cmd -f ./config/dev.env nodemon server/app.js",
     "server-prod": "env-cmd -f ./config/dev.env node server/app.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "build": "concurrently --kill-others-on-fail \"yarn server-prod\" \"yarn client\"",
     "start": "concurrently --kill-others-on-fail \"yarn server-prod\" \"yarn client\""
   },
   "author": "",
