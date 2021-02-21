@@ -12,9 +12,9 @@
     "client": "cd client && yarn start",
     "server": "env-cmd -f ./config/dev.env nodemon server/app.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "build": "cd client && yarn run start",
+    "build": "cd client && yarn start",
     "install-client": "cd client && yarn install",
-    "heroku-postbuild": "yarn run install-client && yarn run build",
+    "heroku-postbuild": "yarn install-client && yarn build",
     "start": "node server/app.js"
   },
   "author": "",
