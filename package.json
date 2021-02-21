@@ -8,7 +8,8 @@
     "client": "cd client && yarn start",
     "server": "env-cmd -f ./config/dev.env nodemon server/app.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "start": "node app.js",
+    "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "author": "",
   "license": "ISC",
