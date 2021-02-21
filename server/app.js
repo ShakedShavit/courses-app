@@ -10,11 +10,11 @@ const port = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.json());
-// app.use(cors());
+app.use(cors());
 
-// app.use(teacherRouter);
-// app.use(studentRouter);
-// app.use(courseRouter);
+app.use(teacherRouter);
+app.use(studentRouter);
+app.use(courseRouter);
 
 
 
@@ -22,7 +22,6 @@ const path = require("path")
 
 
 if (process.env.NODE_ENV === 'production') {
-    console.log('aaaaa', process.env.NODE_ENV, process.env.PORT)
     app.use(express.static(path.join(__dirname, "client", "build")));
     app.use('*', express.static(path.join(__dirname, "client", "build")))
 }
