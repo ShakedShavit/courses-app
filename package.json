@@ -8,8 +8,8 @@
     "client": "cd client && yarn start",
     "server": "env-cmd -f ./config/dev.env nodemon server/app.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "build": "env-cmd -f ./config/dev.env nodemon server/app.js",
-    "start": "node app.js"
+    "build": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "author": "",
   "license": "ISC",
