@@ -12,7 +12,7 @@
     "server": "nodemon server/app.js --exec babel-node --presets babel-preset-env",
     "client": "yarn start --prefix client",
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
-    "heroku-postbuild": "YARN_PRODUCTION=false yarn install --prefix client && yarn client/build --prefix client"
+    "heroku-postbuild": "YARN_PRODUCTION=false yarn install --prefix client && yarn client --prefix client"
 
 
   },
