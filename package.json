@@ -4,17 +4,18 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "14.8.0"
+    "node": "14.8.0",
+    "yarn": "1.22.10"
   },
   "scripts": {
-    "client-install": "yarn install --prefix client",
-    "start": "node server/app.js",
-    "server": "nodemon server/app.js --exec babel-node --presets babel-preset-env",
-    "client": "yarn start --prefix client",
-    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
-    "heroku-postbuild": "YARN_PRODUCTION=false yarn install --prefix client && yarn client --prefix client"
-
-
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && yarn start",
+    "server": "env-cmd -f ./config/dev.env nodemon server/app.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "build": "cd client && yarn run start",
+    "install-client": "cd client && yarn install",
+    "heroku-postbuild": "yarn run install-client && yarn run build",
+    "start": "node server/app.js"
   },
   "author": "",
   "license": "ISC",
