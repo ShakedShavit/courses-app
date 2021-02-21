@@ -7,11 +7,11 @@ const generator = require('generate-password');
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
-    // const teachers = await Teacher.find({});
-    // await Teacher.deleteMany({});
-    res.send('API is working properly')
-});
+// router.get('/', async (req, res) => {
+//     // const teachers = await Teacher.find({});
+//     // await Teacher.deleteMany({});
+//     res.send('API is working properly')
+// });
 
 // router.get('/teacher/me', auth, async (req, res) => {
 //     res.send(req.teacher);
