@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-require('./db/mongoose');
+// require('./db/mongoose');
 const teacherRouter = require('./routes/teacher');
 const studentRouter = require('./routes/student');
 const courseRouter = require('./routes/course');
