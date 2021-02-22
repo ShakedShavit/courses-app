@@ -15,7 +15,7 @@
     "start" : "node server/app.js",
     "build": "cd client && yarn run start",
     "install-client": "cd client && yarn install",
-    "heroku-postbuild": "yarn install --prefix client"
+    "heroku-postbuild": "yarn install --prefix client && yarn run build --prefix client"
   },
   "author": "",
   "license": "ISC",
