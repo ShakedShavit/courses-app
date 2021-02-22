@@ -4,18 +4,18 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "14.8.0"
+    "node": "14.8.0",
+    "yarn": "1.22.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && yarn start",
     "server": "env-cmd -f ./config/dev.env nodemon server/app.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "start" : "node server/app.js",
     "build": "cd client && yarn run start",
     "install-client": "cd client && yarn install",
-
-    "start": "cd server node app.js",
-    "heroku-postbuild": "cd client && yarn install && yarn run build"
+    "heroku-postbuild": "yarn install --prefix client"
   },
   "author": "",
   "license": "ISC",
