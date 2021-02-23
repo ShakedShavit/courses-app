@@ -97,8 +97,6 @@ studentSchema.methods.toJSON = function() {
 studentSchema.methods.generateAuthToken = async function() {
     const student = this;
 
-    console.log('student: ', student)
-
     const token = jwt.sign(
         {
             _id: student._id
@@ -108,8 +106,6 @@ studentSchema.methods.generateAuthToken = async function() {
             expiresIn: "6h"
         }
     );
-
-    console.log('token2: ', token)
 
     student.tokens = student.tokens.concat({ token });
     await student.save();

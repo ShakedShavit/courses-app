@@ -37,8 +37,6 @@ router.post('/student/login', async (req, res) => {
         const student = await Student.findByCredentials(req.body.emailOrId, req.body.password);
         const token = await student.generateAuthToken();
 
-        console.log('token: ', token)
-
         res.send({ student, token });
     } catch (err) {
         res.status(400).send(err);
