@@ -34,14 +34,11 @@ router.post('/student/signup', async (req, res) => {
 
 router.post('/student/login', async (req, res) => {
     try {
-        const a = await Student.find();
-        console.log(a);
-
         const student = await Student.findByCredentials(req.body.emailOrId, req.body.password);
-
-        console.log('student: ', student)
-
         const token = await student.generateAuthToken();
+
+        console.log('token: ', token)
+
         res.send({ student, token });
     } catch (err) {
         res.status(400).send(err);
