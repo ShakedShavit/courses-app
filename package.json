@@ -12,10 +12,8 @@
     "client": "cd client && yarn start",
     "server": "env-cmd -f ./config/dev.env nodemon server/app.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start" : "node server/app.js",
-    "build": "cd client && yarn run start",
-    "install-client": "cd client && yarn install",
-    "heroku-postbuild": "yarn install --prefix client && yarn run build --prefix client"
+    "start" : "cd server && yarn install && yarn app.js",
+    "heroku-postbuild": "cd client && yarn install && yarn run build"
   },
   "author": "",
   "license": "ISC",
