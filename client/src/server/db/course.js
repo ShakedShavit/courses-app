@@ -2,7 +2,7 @@ import Axios from 'axios';
 
 export const getCourseFromDB = async (courseRef, token) => {
     try {
-        const res = await Axios.get('http://localhost:5000/course', {
+        const res = await Axios.get('/course', {
             headers: {
                 'Authorization': `Bearer ${token}` 
             },
@@ -19,7 +19,7 @@ export const getCourseFromDB = async (courseRef, token) => {
 
 export const getAllCoursesFromDB = async (token) => {
     try {
-        const res = await Axios.get('http://localhost:5000/course/get-all', {
+        const res = await Axios.get('/course/get-all', {
             headers: {
                 'Authorization': `Bearer ${token}` 
             }
