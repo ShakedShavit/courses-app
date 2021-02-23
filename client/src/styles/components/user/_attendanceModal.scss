@@ -1,0 +1,72 @@
+.attendance-modal {
+    width: 90% !important;
+
+    .attendance-submit-button {
+        margin: 20px 0;
+    }
+
+    .close-attendance-modal {
+        margin-top: 30px;
+    }
+}
+
+.attendance-form-header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+    * {
+        padding-right: 15px;
+    }
+}
+
+.attendance-inputs {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.class-number {
+    width: 25%;
+    text-align: start;
+}
+.attendance-checkbox {
+    width: 30%;
+    display: flex;
+    text-align: start;
+    justify-content: start;
+
+    input {
+        margin-left: 5px;
+    }
+}
+.reason {
+    width: 40%;
+    display: block;
+    text-align: start;
+}
+
+@media (max-width: 380px) {
+    .attendance-form-header {
+        width: calc(100% + 1rem);
+
+        .class-number {
+            width: 30%;
+        }
+        .attendance-checkbox {
+            width: 40%;
+        }
+        .reason {
+            width: 30%;
+        }
+    }
+}
+
+@media (max-width: 280px) {
+    .attendance-form-header {
+        * {
+            font-size: 0.9rem;
+            text-decoration: underline;
+        }
+    }
+}

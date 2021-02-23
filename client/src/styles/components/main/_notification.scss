@@ -1,0 +1,38 @@
+.notification-container {
+    height: 2.7rem;
+    padding: 10px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: calc(100% - 4rem);
+    left: 20px;
+    background: lightblue;
+
+    * {
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.11rem;
+    }
+
+    .close-notification-container {
+        width: 1.5rem;
+        height: 1.5rem;
+
+        .close-notification {
+            width: 1rem;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            text-align: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

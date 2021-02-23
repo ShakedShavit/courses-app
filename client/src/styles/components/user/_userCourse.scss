@@ -1,0 +1,23 @@
+.user-course {
+    margin-bottom: 50px;
+    background: rgb(187,212,202);
+    background: linear-gradient(90deg, rgba(187,212,202,1) 0%, rgba(83,147,134,1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius: 15px;
+    padding: 20px;
+
+    .show-attendance-button {
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(233, 233, 93);
+        padding: 8px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        color: #000;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(165, 165, 0);
+        }
+    }
+}

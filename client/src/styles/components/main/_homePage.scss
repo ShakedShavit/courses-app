@@ -1,0 +1,35 @@
+.home-page {
+    margin: 0 25px;
+}
+
+.home-headline {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: auto;
+    margin: 25px 0 45px;
+    background-color: rgb(181, 218, 218);
+    padding: 10px;
+    width: auto;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.add-course-button {
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(119, 79, 212);
+    padding: 20px;
+    margin: 15px 0 45px 0;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(221, 169, 169);
+        box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+    }
+}

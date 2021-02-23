@@ -1,0 +1,14 @@
+.course-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .course-property {
+        color: black;
+        text-decoration: none;
+    }
+
+    .course-property-value {
+        color: white;
+    }
+}

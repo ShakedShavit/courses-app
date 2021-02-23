@@ -1,0 +1,40 @@
+.show-students-button {
+   border-radius: 5px;
+    border: none;
+    background-color: rgb(98, 104, 105);
+    padding: 8px;
+    margin: 15px 15px 15px 0;
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(165, 165, 0);
+    } 
+}
+
+.add-student-button {
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(48, 93, 107);
+    padding: 8px;
+    margin-top: 15px;
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(165, 165, 0);
+    }
+}
+
+.enrolled-students-wrapper {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(116, 116, 116);
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    .student-detail {
+        word-break: break-all;
+    }
+}

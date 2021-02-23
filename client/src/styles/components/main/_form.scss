@@ -1,0 +1,27 @@
+.form-input {
+    outline: none;
+    margin-bottom: 10px;
+    padding: 20px;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+}
+
+.input-error-message {
+    color: red;
+    display: block;
+    padding: 5px 0 10px;
+}
+
+form {
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .form-input {
+        width: 100%;
+    }
+}

@@ -1,0 +1,29 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.login-button {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    background-color: rgb(146, 146, 146);
+    color: white;
+    letter-spacing: 0.07rem;
+    font-weight: 600;
+
+    &:hover {
+        color: rgb(107, 107, 107);
+        background: lightgrey;
+        cursor: pointer;
+    }
+
+    &:disabled {
+        background-color: rgb(146, 146, 146);
+        color: white;
+        cursor: default;
+    }
+}

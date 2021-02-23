@@ -1,0 +1,106 @@
+.modal-container { 
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(100, 100, 100, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 60%;
+    min-height: 30%;
+    max-height: 90%;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+    padding: 1rem;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+
+    .modal-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 15px;
+    }
+    .modal-button {
+        height: 2.3rem;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 15px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .green-button {
+        background-color: rgb(0, 126, 0);
+        color: white;
+        border: 1px solid white;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        &:hover {
+            background-color: rgb(0, 190, 0);
+            font-weight: 600;
+            letter-spacing: 0.05rem;
+        }
+    }
+    .grey-button {
+        background-color: white;
+        color: grey;
+        border: 1px solid grey;
+
+        &:hover {
+            background-color: rgb(180, 180, 180);
+            color: black;
+        }
+    }
+
+    .modal-text {
+        margin-top: 60px;
+        font-size: 1.1rem;
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    width: 27px;
+    height: 27px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+    &:hover {
+        cursor: pointer;
+        transform: rotate(-7deg) scale(1.1);
+    }
+}
+
+@media (max-width: 620px) {
+    .modal {
+        width: 80%;
+    }
+}
+
+@media (max-width: 380px) {
+    .modal {
+        padding-top: 50px;
+    }
+}
