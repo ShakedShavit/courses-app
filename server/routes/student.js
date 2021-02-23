@@ -33,6 +33,9 @@ router.post('/student/signup', async (req, res) => {
 });
 
 router.post('/student/login', async (req, res) => {
+    console.log(req.body.emailOrId, req.body.password)
+    console.log(process.env.MONGODB_URI)
+
     try {
         const student = await Student.findByCredentials(req.body.emailOrId, req.body.password);
         const token = await student.generateAuthToken();
