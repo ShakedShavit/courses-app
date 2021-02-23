@@ -2,7 +2,7 @@ import Axios from 'axios';
 
 export const loginTeacherInDB = async (email, password) => {
     try {
-        const res = await Axios.post('http://localhost:5000/teacher/login', {
+        const res = await Axios.post('/teacher/login', {
             email,
             password
         });
@@ -17,7 +17,7 @@ export const loginTeacherInDB = async (email, password) => {
 
 export const registerCourseInDB = async (courseDetails, token) => {
     try {
-        const res = await Axios.post('http://localhost:5000/teacher/course/register', courseDetails, {
+        const res = await Axios.post('/teacher/course/register', courseDetails, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -33,7 +33,7 @@ export const registerCourseInDB = async (courseDetails, token) => {
 
 export const teacherChangePasswordInDB = async (currentPassword, newPassword, token) => {
     try {
-        const res = await Axios.patch('http://localhost:5000/teacher/update/password', {currentPassword, newPassword}, {
+        const res = await Axios.patch('/teacher/update/password', {currentPassword, newPassword}, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -49,7 +49,7 @@ export const teacherChangePasswordInDB = async (currentPassword, newPassword, to
 
 export const addStudentToCourseInDB = async (courseId, studentEmailOrId, token) => {
     try {
-        const res = await Axios.post('http://localhost:5000/teacher/course/add-student', { courseId, studentEmailOrId }, {
+        const res = await Axios.post('/teacher/course/add-student', { courseId, studentEmailOrId }, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -65,7 +65,7 @@ export const addStudentToCourseInDB = async (courseId, studentEmailOrId, token) 
 
 export const getStudentAttendanceWithStudentIdFromDB = async (studentId, courseObjId, token) => {
     try {
-        const res = await Axios.get('http://localhost:5000/teacher/get/student/course-attendance', {
+        const res = await Axios.get('/teacher/get/student/course-attendance', {
             headers: {
                 'Authorization': `Bearer ${token}`
             },

@@ -2,7 +2,7 @@ import Axios from 'axios';
 
 export const loginStudentInDB = async (emailOrId, password) => {
     try {
-        const res = await Axios.post('http://localhost:5000/student/login', {
+        const res = await Axios.post('/student/login', {
             emailOrId,
             password
         });
@@ -17,7 +17,7 @@ export const loginStudentInDB = async (emailOrId, password) => {
 
 export const studentChangePasswordInDB = async (currentPassword, newPassword, token) => {
     try {
-        const res = await Axios.patch('http://localhost:5000/student/update/password', {currentPassword, newPassword}, {
+        const res = await Axios.patch('/student/update/password', {currentPassword, newPassword}, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -33,7 +33,7 @@ export const studentChangePasswordInDB = async (currentPassword, newPassword, to
 
 export const getStudentFromDB = async (_id, token) => {
     try {
-        const res = await Axios.get('http://localhost:5000/student/get', {
+        const res = await Axios.get('/student/get', {
             headers: {
                 'Authorization': `Bearer ${token}`
             },
@@ -51,7 +51,7 @@ export const getStudentFromDB = async (_id, token) => {
 
 export const insertStudentAttendanceInDB = async (courseObjId, classesAttendance, token) => {
     try {
-        const res = await Axios.post('http://localhost:5000/student/course-attendance/insert', { courseObjId, classesAttendance }, {
+        const res = await Axios.post('/student/course-attendance/insert', { courseObjId, classesAttendance }, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -67,7 +67,7 @@ export const insertStudentAttendanceInDB = async (courseObjId, classesAttendance
 
 export const getStudentAttendanceFromDB = async (courseObjId, token) => {
     try {
-        const res = await Axios.get('http://localhost:5000/student/get/course-attendance', {
+        const res = await Axios.get('/student/get/course-attendance', {
             headers: {
                 'Authorization': `Bearer ${token}`
             },
@@ -84,7 +84,7 @@ export const getStudentAttendanceFromDB = async (courseObjId, token) => {
 
 // export const getAllStudentAttendanceFromDB = async (token) => {
 //     try {
-//         const res = await Axios.get('http://localhost:5000/student/get/all-courses-attendance', {
+//         const res = await Axios.get('/student/get/all-courses-attendance', {
 //             headers: {
 //                 'Authorization': `Bearer ${token}`
 //             }
